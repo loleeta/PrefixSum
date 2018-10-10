@@ -1,10 +1,10 @@
 CPPFLAGS = -std=c++11 -Wall -Werror -pedantic -ggdb -pthread
 
-hw2 : hw2.cpp
+Heaper : Heaper.cpp
 	g++ $(CPPFLAGS) $< -o $@
 
-all : hw2
+all : Heaper
 	@echo "Made it all!"
 
 clean : 
-	$(RM) $(ALL_OBJS) hw2
+	$(RM) $(ALL_OBJS) Heaper
