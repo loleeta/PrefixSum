@@ -1,5 +1,5 @@
 /**
- * @file hw2.cpp - use threads to implement a two-pass parallel algorithm to
+ * @file Heaper.cpp - use threads to implement a two-pass parallel algorithm to
  * compute the prefix sum of an array
  * @author Lolita Lam
  *
@@ -158,7 +158,7 @@ public:
 	 * @param data 		Data object
 	 */
 	SumHeap(Data *data) : Heaper(data) {
-		calcSum(0, 0);
+		calcSum(0, 1);
 	}
 	/**
 	 * Prefix sum pass of algorithm. Pads array if it isn't a power of two.
@@ -192,7 +192,6 @@ private:
 	 * @param level		current level of tree
 	 */
 	void calcSum(int i, int level) {
-		//cout << "CalcSum at (" << i << ", " << level << ")" << endl;
 		if (isLeaf(i))
 			return;
 		if (level < 4) {
